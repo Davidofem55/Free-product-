@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/free_drip_landing_page.html" }
+  ]
+}
