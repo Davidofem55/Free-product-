@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free: 30-Day Lead Nurture Email Drip for Real Estate Agents</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:#0D1B2A; --navy2:#1B3A5C; --gold:#C9A84C; --gold-lt:#F5EDD6;
+    --teal:#1D9E75; --teal-lt:#E1F5EE; --white:#FFFFFF;
+    --gray1:#F7F6F3; --gray2:#E8E6DF; --gray3:#9A9892;
+    --text:#1A1A18; --text2:#4A4A48;
+  }
+  body { font-family:'Inter',sans-serif; background:var(--white); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+
+  .bar { background:var(--teal); color:var(--white); text-align:center; font-size:13px; font-weight:700; padding:10px 16px; }
+  .bar span { opacity:0.7; font-weight:500; }
+
+  .hero { background:var(--navy); padding:80px 20px; text-align:center; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; top:-80px; right:-80px; width:320px; height:320px; border-radius:50%; background:var(--navy2); opacity:0.5; }
+  .hero::after  { content:''; position:absolute; bottom:-60px; left:-60px; width:240px; height:240px; border-radius:50%; background:var(--navy2); opacity:0.35; }
+  .hero-inner { position:relative; z-index:1; max-width:680px; margin:0 auto; }
+  .hero-badge { display:inline-block; background:rgba(29,158,117,0.15); border:1px solid rgba(29,158,117,0.4); color:#5DCAA5; font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:5px 16px; border-radius:20px; margin-bottom:28px; }
+  .hero h1 { font-size:clamp(36px,6vw,62px); font-weight:900; color:var(--white); line-height:1.08; letter-spacing:-0.03em; margin-bottom:20px; }
+  .hero h1 em { font-style:normal; color:var(--gold); }
+  .hero-sub { font-size:18px; color:rgba(255,255,255,0.5); margin-bottom:40px; line-height:1.6; }
+
+  /* FORM */
+  .form-box { background:var(--white); border-radius:16px; padding:36px 32px; max-width:480px; margin:0 auto; }
+  .form-title { font-size:18px; font-weight:800; color:var(--navy); margin-bottom:6px; letter-spacing:-0.02em; }
+  .form-sub { font-size:14px; color:var(--gray3); margin-bottom:24px; }
+  .field { margin-bottom:14px; }
+  .field label { display:block; font-size:13px; font-weight:600; color:var(--text2); margin-bottom:6px; }
+  .field input { width:100%; padding:13px 16px; border:1.5px solid var(--gray2); border-radius:8px; font-size:15px; font-family:'Inter',sans-serif; color:var(--text); outline:none; transition:border-color 0.15s; }
+  .field input:focus { border-color:var(--navy); }
+  .btn-submit { width:100%; background:var(--teal); color:var(--white); font-size:17px; font-weight:800; padding:18px; border-radius:8px; border:none; cursor:pointer; font-family:'Inter',sans-serif; transition:opacity 0.15s; margin-top:4px; }
+  .btn-submit:hover { opacity:0.9; }
+  .form-fine { font-size:12px; color:var(--gray3); text-align:center; margin-top:12px; line-height:1.5; }
+
+  /* PROOF */
+  .proof { background:var(--gold-lt); padding:20px; display:flex; align-items:center; justify-content:center; gap:32px; flex-wrap:wrap; border-top:1px solid #E8D9A0; border-bottom:1px solid #E8D9A0; }
+  .proof-item { font-size:13px; font-weight:600; color:var(--navy); display:flex; align-items:center; gap:7px; }
+
+  /* WHAT */
+  .what { padding:72px 20px; max-width:720px; margin:0 auto; }
+  .what h2 { font-size:clamp(26px,4vw,38px); font-weight:900; letter-spacing:-0.025em; color:var(--navy); margin-bottom:10px; }
+  .what p  { font-size:17px; color:var(--text2); margin-bottom:36px; line-height:1.65; }
+  .email-list { list-style:none; }
+  .email-item { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--gray2); align-items:flex-start; }
+  .email-item:last-child { border-bottom:none; }
+  .email-day { font-size:11px; font-weight:700; color:var(--gold); background:var(--gold-lt); padding:3px 8px; border-radius:4px; flex-shrink:0; margin-top:2px; white-space:nowrap; }
+  .email-name { font-size:15px; font-weight:600; color:var(--navy); margin-bottom:2px; }
+  .email-desc { font-size:13px; color:var(--gray3); }
+
+  /* UPSELL */
+  .upsell { background:var(--navy); padding:72px 20px; text-align:center; }
+  .upsell-inner { max-width:600px; margin:0 auto; }
+  .upsell h2 { font-size:clamp(24px,3.5vw,36px); font-weight:900; letter-spacing:-0.025em; color:var(--white); margin-bottom:12px; }
+  .upsell p  { font-size:16px; color:rgba(255,255,255,0.45); margin-bottom:32px; }
+  .upsell-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:32px; text-align:left; }
+  @media(max-width:500px){ .upsell-grid{ grid-template-columns:1fr; } }
+  .upsell-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:16px; }
+  .upsell-icon { font-size:20px; margin-bottom:8px; }
+  .upsell-name { font-size:13px; font-weight:700; color:var(--white); margin-bottom:4px; }
+  .upsell-desc { font-size:12px; color:rgba(255,255,255,0.4); line-height:1.5; }
+  .upsell-price { font-size:13px; color:rgba(255,255,255,0.3); margin-bottom:20px; }
+  .upsell-price strong { font-size:32px; color:var(--gold); font-weight:900; letter-spacing:-0.02em; }
+  .upsell-price s { font-size:18px; }
+  .btn-upsell { display:inline-block; background:var(--gold); color:var(--navy); font-size:17px; font-weight:800; padding:18px 44px; border-radius:8px; text-decoration:none; }
+  .btn-upsell:hover { opacity:0.92; }
+  .upsell-fine { margin-top:12px; font-size:13px; color:rgba(255,255,255,0.25); }
+
+  footer { background:var(--navy); border-top:1px solid rgba(255,255,255,0.06); padding:24px 20px; text-align:center; font-size:13px; color:rgba(255,255,255,0.25); }
+  footer a { color:var(--gold); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<div class="bar">🎁 100% free — no credit card, no catch &nbsp;<span>· Instant PDF download</span></div>
+
+<!-- HERO + FORM -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Free Download for Real Estate Agents</div>
+    <h1>30 days of follow-up emails.<br><em>Already written.</em><br>Load & go.</h1>
+    <p class="hero-sub">The exact email sequence that turns cold leads into ready buyers — fully written, ready to load into any CRM today. Free.</p>
+
+    <div class="form-box">
+      <p class="form-title">Get your free email drip</p>
+      <p class="form-sub">Enter your details — download link sent instantly.</p>
+
+      <!-- 
+        INTEGRATION NOTE:
+        Replace this form action with your Brevo embedded form URL.
+        In Brevo: Contacts → Forms → Create a form → Copy embed code
+        Or use a Netlify form by adding netlify attribute below.
+      -->
+      <form name="lead-capture" method="POST" action="/thank-you" netlify>
+        <div class="field">
+          <label for="fname">First name</label>
+          <input type="text" id="fname" name="first_name" placeholder="Sarah" required>
+        </div>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input type="email" id="email" name="email" placeholder="sarah@realty.com" required>
+        </div>
+        <div class="field">
+          <label for="state">Your state</label>
+          <input type="text" id="state" name="state" placeholder="California" required>
+        </div>
+        <button type="submit" class="btn-submit">Send me the free drip →</button>
+      </form>
+      <p class="form-fine">No spam. Unsubscribe anytime. Your email is used only to deliver the download and occasional updates from George Foster.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof">
+  <div class="proof-item">✉️ 30 pre-written emails</div>
+  <div class="proof-item">⚡ Works in any CRM</div>
+  <div class="proof-item">🇺🇸 All 50 states</div>
+  <div class="proof-item">💰 100% free</div>
+</div>
+
+<!-- WHAT'S IN IT -->
+<section class="what">
+  <h2>What's in the drip</h2>
+  <p>10 of the 30 emails below — load all of them into your CRM and let it run. Every email has a different angle so leads don't get bored and unsubscribe.</p>
+  <ul class="email-list">
+    <li class="email-item">
+      <span class="email-day">Day 1</span>
+      <div><div class="email-name">The warm intro</div><div class="email-desc">A personal, non-pushy opening that sets you apart from every other agent in their inbox</div></div>
+    </li>
+    <li class="email-item">
+      <span class="email-day">Day 3</span>
+      <div><div class="email-name">3 things agents don't tell buyers</div><div class="email-desc">Builds trust instantly by giving them inside knowledge</div></div>
+    </li>
+    <li class="email-item">
+      <span class="email-day">Day 5</span>
+      <div><div class="email-name">Social proof story</div><div class="email-desc">A short client win that positions you as the agent who gets results</div></div>
+    </li>
+    <li class="email-item">
+      <span class="email-day">Day 8</span>
+      <div><div class="email-name">Neighbourhood spotlight</div><div class="email-desc">Positions you as the local expert — triggers interest in a specific area</div></div>
+    </li>
+    <li class="email-item">
+      <span class="email-day">Day 14</span>
+      <div><div class="email-name">Monthly market update</div><div class="email-desc">Keeps you top of mind with real data — feels like a newsletter, not a sales email</div></div>
+    </li>
+    <li class="email-item">
+      <span class="email-day">Day 18</span>
+      <div><div class="email-name">Rate urgency email</div><div class="email-desc">Shows the real dollar impact of waiting — motivates fence-sitters to act</div></div>
+    </li>
+    <li class="email-item">
+      <span class="email-day">Day 22</span>
+      <div><div class="email-name">The re-engage</div><div class="email-desc">Wakes up cold leads who went quiet — the simplest email that gets the most replies</div></div>
+    </li>
+    <li class="email-item">
+      <span class="email-day">Day 27</span>
+      <div><div class="email-name">Free offer help</div><div class="email-desc">Offers to write their offer for free — removes the last barrier to booking a call</div></div>
+    </li>
+    <li class="email-item">
+      <span class="email-day">Day 30</span>
+      <div><div class="email-name">Your direct line</div><div class="email-desc">Leaves your number in their inbox forever — the most important email in the sequence</div></div>
+    </li>
+  </ul>
+</section>
+
+<!-- UPSELL -->
+<section class="upsell">
+  <div class="upsell-inner">
+    <h2>Want the full system?</h2>
+    <p>The email drip is one of six resources in the Real Estate Closer Pack. The rest of the pack includes everything else a working agent needs.</p>
+    <div class="upsell-grid">
+      <div class="upsell-card">
+        <div class="upsell-icon">📞</div>
+        <div class="upsell-name">10 cold call scripts</div>
+        <div class="upsell-desc">Word-for-word for expired, FSBO, buyers, investors & more</div>
+      </div>
+      <div class="upsell-card">
+        <div class="upsell-icon">📱</div>
+        <div class="upsell-name">30 social posts</div>
+        <div class="upsell-desc">Full month of Instagram, Facebook, X & LinkedIn content</div>
+      </div>
+      <div class="upsell-card">
+        <div class="upsell-icon">🤖</div>
+        <div class="upsell-name">AI prompt toolkit</div>
+        <div class="upsell-desc">10 ChatGPT prompts for listings, LOIs, objections & more</div>
+      </div>
+      <div class="upsell-card">
+        <div class="upsell-icon">📄</div>
+        <div class="upsell-name">100 power words + planner</div>
+        <div class="upsell-desc">Cheat sheet & weekly planner — printable, use forever</div>
+      </div>
+    </div>
+    <div class="upsell-price"><s>$247 value</s> → <strong>$27</strong> one-time</div>
+    <a href="https://georgefoster.gumroad.com/l/knqqno" class="btn-upsell" target="_blank">Get the full Closer Pack — $27 →</a>
+    <p class="upsell-fine">Instant PDF download · No subscription · All 50 states</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 George Foster &nbsp;·&nbsp; <a href="https://georgefoster.gumroad.com/l/knqqno">Full Closer Pack — $27</a></p>
+</footer>
+
+</body>
+</html>
